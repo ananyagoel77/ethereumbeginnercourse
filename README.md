@@ -12,32 +12,30 @@ This Ethereum smart contract is coded in Solidity and  establishes a unique toke
 
 - Function for generating new tokens and eliminating current tokens with necessary validations.
 
-Contract Details
+**Contract Details**
 
 
-Variables
+- **Variables**
 
-tokenName: The name of the token.
+**tokenName:** The name of the token.
 
-tokenAbbrv: The abbreviation for the token.
+**tokenAbbrv:** The abbreviation for the token.
 
-totalSupply: The total amount of token in circulation.
+**totalSupply:** The total amount of token in circulation.
 
-Mappings
+- **Mapping**
 
-balances: A mapping that links addresses to their respective token balances.
+**balances:** A mapping that links addresses to their respective token balances.
 
-Functions
+- **Functions**
+  
+**mint(address _add, uint _amount):** This function increases the overall token supply and adds the specified amount to the balance of the provided address.
 
-mint(address _add, uint _amount): This function increases the overall token supply and adds the specified amount to the balance of the provided address.
+**burn(address_add, uint_amount):** This function decreases the overall token supply and substract the specific amount from the balance of the given address. It ensure that the address's balance is greater or euqal to the burned before proceeding
 
-burn(address_add, uint_amount): This function decreases the overall token supply and substract the specific amount from the balance of the given address. It ensure that the address's balance is greater or euqal to the burned before proceeding
-
-Usage
+**Usage**
 
 
-Deployment 
-
-for deploying the contract , we need to provide token name, abbrevation and intial supply during deployment
+**Deployment:** for deploying the contract , we need to provide token name, abbrevation and intial supply during deployment
 
 
