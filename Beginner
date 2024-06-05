@@ -24,8 +24,9 @@ contract Token {
 
     // mapping variable here
     mapping(address => uint) public balances;
+        
         // Constructor to initialize the token details
-        constructor(string memory _name, string memory _abbrv, uint _initialSupply) {
+         constructor(string memory _name, string memory _abbrv, uint _initialSupply) {
             tokenName = _name;
             tokenAbbrv = _abbrv;
             totalSupply = _initialSupply;
