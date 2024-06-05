@@ -17,15 +17,19 @@ This Ethereum smart contract is coded in Solidity and  establishes a unique toke
 
 - **Variables**
 
-**tokenName:** The name of the token.
+**tokenName(string):** The name of the token.
 
-**tokenAbbrv:** The abbreviation for the token.
+**tokenAbbrv(string):** The abbreviation for the token.
 
-**totalSupply:** The total amount of token in circulation.
+**totalSupply(uint):** The total amount of token in circulation.
 
 - **Mapping**
 
 **balances:** A mapping that links addresses to their respective token balances.
+
+- **Constructor**
+
+The constructor initializes the token's name, abbreviation, and initial supply. The initial supply is assigned to the contract deployer.
 
 - **Functions**
   
@@ -36,6 +40,11 @@ This Ethereum smart contract is coded in Solidity and  establishes a unique toke
 **Usage**
 
 
-**Deployment:** for deploying the contract , we need to provide token name, abbrevation and intial supply during deployment
+- **Deployment:** for deploying the contract , we need to provide token name, abbrevation and intial supply during deployment
+- **Minting Token:** To create new tokens, use the mint function and provide the address and the amount of tokens to be minted. For instance, if you want to add 100 tokens to the address 0xAbc123..., you can call mint(0xAbc123..., 100).
+- **Burning token:** To remove token, use the burn function and specified the address and the amount of tokens to be burned. For instance, if you want to substract 50 tokens from the address 0xAbc123....., you can call the burn(0xAbc123...., 50), but only if the balance is enough.
+
+**License**
+This contract is licensed under the MIT License. SPDX-License-Identifier: MIT.
 
 
